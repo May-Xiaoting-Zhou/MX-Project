@@ -1,0 +1,34 @@
+
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{times}
+\usepackage{hyperref}
+\title{Literature Review Synthesis: AI-Based Classification of Cognitive States}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Overview}
+Understanding internal cognitive states such as \textbf{attention}, \textbf{impasse}, and the \textbf{Aha! moment} is critical for developing intelligent systems in education, human-computer interaction, and neuroscience. These states are often subtle and transient, making them hard to detect using behavioral cues or self-reports alone. However, \textbf{physiological signals}---particularly \textbf{EEG}, \textbf{pupil dilation}, and \textbf{Empatica-derived signals} such as \textbf{GSR}, \textbf{BVP}, \textbf{temperature}, and \textbf{ACC}---have shown promise for real-time, objective classification of these states using \textbf{machine learning (ML)} and \textbf{deep learning (DL)} models~\cite{appriou2020modern}.
+
+\section*{Defining Cognitive States}
+Cognitive states are operationalized in literature based on measurable physiological markers. For instance, \textbf{attention} has been linked to elevated \textbf{beta-band EEG activity}, stable \textbf{GSR}, and minimal \textbf{pupil fluctuation}~\cite{sosa2011classification}. The \textbf{impasse} state is more ambiguous but is generally characterized by a mix of theta and alpha EEG signals, increased pupil dilation, and fluctuating arousal responses in GSR. The \textbf{Aha! moment} or insight is associated with a rapid shift in cognition and emotion, often marked by \textbf{gamma bursts} in EEG, sharp spikes in pupil dilation, and transient changes in GSR or skin temperature.
+
+\section*{Signal Contributions}
+Each signal modality contributes distinctively. \textbf{EEG} provides excellent temporal resolution with features used in classifiers such as \textbf{CNNs}, \textbf{SVMs}, and \textbf{Riemannian Geometry Classifiers (RGCs)}~\cite{appriou2020modern}. \textbf{Pupil dilation} indicates \textbf{arousal and cognitive load}. Empatica-derived signals, especially \textbf{GSR}, provide real-time insight into \textbf{autonomic arousal}, while \textbf{BVP} and \textbf{temperature} reflect slower physiological responses. \textbf{ACC} can differentiate motion-induced noise from cognitive activity.
+
+\section*{Modeling Approaches}
+ML models include \textbf{KNN}, \textbf{Random Forests}, and \textbf{XGBoost}, while DL approaches like \textbf{CNN-LSTM hybrids} excel with multimodal time-series data. \textbf{KNN with $k=10$} performed best in one study on EEG attention classification~\cite{sosa2011classification}. \textbf{SVMs} with \textbf{non-linear features} achieved 92.1\% accuracy in classifying cognitive states~\cite{ahmad2016classification}. \textbf{RGCs} and \textbf{FBCSP} methods also show promise~\cite{appriou2020modern}.
+
+\section*{Multimodal Fusion and Gaps}
+Fusion of \textbf{EEG + GSR + pupil dilation} gives best results with accuracies above 90\%. Feature importance tools highlight \textbf{theta/gamma EEG bands}, \textbf{phasic GSR}, and \textbf{peak pupil dilation rate}. Challenges include labeling ambiguities, underuse of certain signals, lack of ecological validity, and poor model explainability.
+
+\section*{Conclusion}
+Physiological signal-based AI classification of cognitive states is promising. EEG is central, but multimodal fusion enhances accuracy. DL models incorporating temporal structure and attention mechanisms achieve state-of-the-art performance. This research addresses key challenges and contributes novel insights into cognitive state modeling.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
